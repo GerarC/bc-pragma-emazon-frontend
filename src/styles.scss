@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/components/_settings/colors';
+$font-src: 'assets/fonts/poppins/Poppins-Regular.ttf';
+
+@font-face {
+    font-family: 'Poppins';
+    src: url($font-src);
+}
+
+:root{
+	font-family: 'Poppins';
+}
+
+body {
+    background-color: $bg-light-grey;
+}
+
+* {
+	font-family: 'Poppins';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}

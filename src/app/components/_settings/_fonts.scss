@@ -1,0 +1,23 @@
+$font-sizes: (
+	xs: 14px,
+	s: 16px,
+	m: 18px,
+	l: 22px
+);
+
+$font-weights: (
+	light: 300,
+	regular: 400
+);
+
+@each $name, $size in $font-sizes {
+	.font-size-#{$name}{
+		font-size: $size;
+	}
+}
+
+@each $name, $weight in $font-weights{
+	.font-weight-#{$name} {
+		font-weight: $weight;
+	}
+}

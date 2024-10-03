@@ -1,0 +1,100 @@
+@import "../../_settings/colors";
+@import "../../_settings/fonts";
+
+$pressed-btn-color: #6a17ab;
+
+$colors: (
+    active: $accent-color,
+);
+
+button {
+    all: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    gap: 8px;
+}
+
+.btn-main {
+    border: 2px solid transparent;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid;
+}
+
+// As i'm learning scss, I will make this type of comments
+// This piece of code iterates through colors, takes it as a map,
+// so it can select the color and the name I gave to the color
+// #{$name} you can make variable classes, and finally the rest of the code can be resume in sub things
+@each $name, $color in $colors {
+    .btn-#{$name} {
+        background-color: $color;
+        color: white;
+
+        &.btn-secondary {
+            background-color: transparent;
+            color: $color;
+            border-color: $color;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            background-color: $pressed-btn-color;
+
+            &.btn-secondary {
+                background-color: transparent;
+                color: $pressed-btn-color;
+                border-color: $pressed-btn-color;
+            }
+
+            &.btn-text {
+                background-color: transparent;
+                color: $pressed-btn-color;
+            }
+        }
+
+        &.btn-text {
+            background-color: transparent;
+            color: $color;
+        }
+    }
+}
+
+.btn-disabled {
+    background-color: $disabled-color;
+    color: white;
+	cursor: default;
+
+    &.btn-secondary {
+        background-color: transparent;
+        color: $disabled-color;
+        border-color: $disabled-color;
+    }
+
+    &.btn-text {
+        background-color: transparent;
+        color: $disabled-color;
+    }
+}
+
+
+.btn-s {
+    font-size: map-get($map: $font-sizes, $key: "s");
+    padding: 4px 12px;
+}
+
+.btn-m {
+    font-size: map-get($map: $font-sizes, $key: "m");
+    padding: 8px 28px;
+}
+
+.btn-l {
+    font-size: map-get($map: $font-sizes, $key: "l");
+    padding: 12px 52px;
+}

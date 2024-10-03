@@ -2,10 +2,10 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": "./",
         "outDir": "./dist/out-tsc",
         "paths": {
-            "@atoms/*": ["app/components/atoms/*"]
+            "@atoms/*": ["src/app/components/atoms/*"]
         },
         "forceConsistentCasingInFileNames": true,
         "strict": true,

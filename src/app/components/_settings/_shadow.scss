@@ -1,0 +1,29 @@
+$xs-size: 0px 15px 10px 0px;
+$s-size: 0px 8px 16px 0px;
+$m-size: 0px 15px 30px 0px;
+$l-size: 0px 10px 30px 0px;
+
+
+$xs-shadow-color: #d3c0d612 ;
+$shadow-color: #3e134d;
+
+$s-opacity: .07;
+$m-opacity: .09;
+$l-opacity: .47;
+
+.shadow-xs {
+	box-shadow: $xs-size $xs-shadow-color;
+}
+
+.shadow-s {
+	box-shadow: $s-size rgba($shadow-color, $s-opacity);
+}
+
+.shadow-m {
+	box-shadow: $m-size rgba($shadow-color, $m-opacity);
+}
+
+.shadow-l {
+	box-shadow: $l-size rgba($shadow-color, $l-opacity);
+}
+
