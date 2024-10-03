@@ -1,0 +1,53 @@
+@import '../../../../styles/styles.scss';
+
+input{
+	all: unset;
+	background-color: $white-color;
+	border-radius: 2px;
+}
+
+.input-size-s {
+	padding: 8px 12px;
+	font-size: map-get($map: $font-sizes, $key: "s");
+}
+
+.input-size-m {
+	padding: 12px 12px;
+	font-size: map-get($map: $font-sizes, $key: "m");
+}
+
+.label-size-s {
+	font-size: map-get($map: $font-sizes, $key: "s");
+}
+
+.label-size-m {
+	font-size: map-get($map: $font-sizes, $key: "m");
+}
+
+.labeled-input-container {
+	display: inline-grid;
+	gap: 4px;
+}
+
+.input-state-default {
+    border: 1px solid;
+	border-color: $spacer-light-color;
+	
+	&:focus {
+		border-color: $accent-color;
+	}
+	
+	&::placeholder {
+		color: $border-color;
+	}
+}
+
+.input-state-disabled {
+    border: 1px solid;
+	border-color: $disabled-color;
+	
+	&::placeholder {
+		color: $disabled-color;
+	}
+}
+

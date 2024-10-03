@@ -1,0 +1,22 @@
+<div *ngIf="label === ''; else labeledInput">
+    <input
+        class="{{ styles }}"
+        type="{{ type }}"
+        placeholder="{{ placeholder }}"
+        disabled="{{ disabled }}"
+        name="input-atom"
+    />
+</div>
+
+<ng-template #labeledInput>
+    <div class="labeled-input-container">
+        <label for="input-atom" class="{{ labelStyles }}">{{ label }}</label>
+        <input
+            class="{{ styles }}"
+            type="{{ type }}"
+            placeholder="{{ placeholder }}"
+            disabled="{{ disabled }}"
+            name="input-atom"
+        />
+    </div>
+</ng-template>

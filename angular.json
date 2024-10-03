@@ -28,13 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
 			"stylePreprocessorOptions": {
-				"includePaths": [
-					"src/app/components/_settings"
-				]
-			},
+              "includePaths": [
+				  "src", "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -101,7 +101,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }
