@@ -1,4 +1,4 @@
-@import '../../../../styles/styles.scss';
+@import 'styles';
 
 input{
 	all: unset;
@@ -29,7 +29,7 @@ input{
 	gap: 4px;
 }
 
-.input-state-default {
+.input-state-active {
     border: 1px solid;
 	border-color: $spacer-light-color;
 	

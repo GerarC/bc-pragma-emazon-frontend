@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AtomsModule } from '@atoms/atoms.module';
+import { AtomsModule } from './shared/components/atoms/atoms.module';
 ;
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

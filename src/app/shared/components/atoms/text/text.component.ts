@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EMPTY_STRING } from '@constants/atom-constants';
 
 @Component({
     selector: 'text-atom',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TextComponent implements OnInit {
 	
-	styles = '';
+	styles = EMPTY_STRING;
 	
 	@Input() weight: string = 'regular';
 	@Input() size: string = 'm';
