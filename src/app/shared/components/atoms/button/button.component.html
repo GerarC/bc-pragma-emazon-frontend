@@ -1,4 +1,7 @@
-<button class={{styles}} (click)="emitButtonClick()"><ng-content></ng-content></button>
-	
-	
-	
+<button
+    [class]="styles"
+    [disabled]="state === 'disabled' ? true : false"
+    (click)="emitButtonClick()"
+>
+    <ng-content></ng-content>
+</button>

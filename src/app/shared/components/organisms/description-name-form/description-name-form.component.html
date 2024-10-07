@@ -5,6 +5,7 @@
         label="Name"
         size="s"
         name="name"
+		(ngModelChange)="onChange()"
     ></input-atom>
     <textarea-atom
         formControlName="description"
@@ -12,6 +13,7 @@
         size="s"
 		type="textarea"
         name="description"
+		(ngModelChange)="onChange()"
     ></textarea-atom>
-    <button-atom size="m">Add {{ model }}</button-atom>
+    <button-atom size="m" [state]="buttonState">Add {{ model }}</button-atom>
 </form>

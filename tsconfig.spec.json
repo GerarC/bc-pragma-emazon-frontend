@@ -3,7 +3,18 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "outDir": "./out-tsc/spec",
-        "types": ["jest"]
+        "types": ["jest"],
+        "paths": {
+            "@atoms/*": ["src/app/shared/components/atoms/*"],
+            "@molecules/*": ["src/app/shared/components/molecules/*"],
+            "@organisms/*": ["src/app/shared/components/organisms/*"],
+            "@templates/*": ["src/app/shared/components/templates/*"],
+            "@pages/*": ["src/app/shared/pages/*"],
+            "@customTypes/*": ["src/app/shared/types/*"],
+            "@interfaces/*": ["src/app/shared/interfaces/*"],
+            "@constants/*": ["src/app/shared/constants/*"],
+            "@services/*": ["src/app/core/services/*"]
+        },
     },
     "files": ["src/test.ts", "src/polyfills.ts"],
     "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]

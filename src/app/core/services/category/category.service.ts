@@ -18,8 +18,6 @@ export class CategoryService {
     constructor(private httpClient: HttpClient) { }
 
     saveCategory(category: CategoryRequest): Observable<void> {
-        console.log(this.categoryAPIUrl);
-        console.log('Hola', category);
         return this.httpClient.post<void>(`${this.categoryAPIUrl}`, category, {
             headers: this.headers,
         });
