@@ -1,1 +1,1 @@
-export const CATEGORY_BASE_ENDPOINT = 'categories';
+export const CATEGORY_BASE_ENDPOINT = '/categories';

@@ -32,6 +32,5 @@ export class ButtonComponent implements OnInit {
 	
 	emitButtonClick(){
 		this.buttonClick.emit();
-		console.log(this.state)
 	}
 }

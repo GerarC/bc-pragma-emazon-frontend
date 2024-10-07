@@ -9,9 +9,11 @@
             "@molecules/*": ["src/app/shared/components/molecules/*"],
             "@organisms/*": ["src/app/shared/components/organisms/*"],
             "@templates/*": ["src/app/shared/components/templates/*"],
-			"@customTypes/*": ["src/app/shared/types/*"],
-			"@interfaces/*": ["src/app/shared/interfaces/*"],
-			"@constants/*": ["src/app/shared/constants/*"]
+            "@pages/*": ["src/app/shared/pages/*"],
+            "@customTypes/*": ["src/app/shared/types/*"],
+            "@interfaces/*": ["src/app/shared/interfaces/*"],
+            "@constants/*": ["src/app/shared/constants/*"],
+            "@services/*": ["src/app/core/services/*"]
         },
         "forceConsistentCasingInFileNames": true,
         "strict": true,
