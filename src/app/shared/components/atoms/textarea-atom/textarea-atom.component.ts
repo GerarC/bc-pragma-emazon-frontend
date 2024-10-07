@@ -1,43 +1,27 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
-import {
-    AbstractControl,
-    ControlContainer,
-    ControlValueAccessor,
-    FormControl,
-    NG_VALUE_ACCESSOR,
-} from '@angular/forms';
-import {
-    DISABLED_STATE,
-    EMPTY_STRING,
-    INPUT_DEFAULT_SIZE,
-    INPUT_DEFAULT_STATE,
-    INPUT_DEFAULT_TYPE,
-    INPUT_LABEL_SIZE_PREFIX,
-    INPUT_SIZE_PREFIX,
-    INPUT_STATE_PREFIX,
-} from '@constants/atom-constants';
-import { InputSize, InputState, InputType } from '@customTypes/atoms-enums';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { DISABLED_STATE, EMPTY_STRING, TEXTAREA_DEFAULT_SIZE, TEXTAREA_DEFAULT_STATE, TEXTAREA_LABEL_SIZE_PREFIX, TEXTAREA_SIZE_PREFIX, TEXTAREA_STATE_PREFIX } from '@constants/atom-constants';
+import { TextAreaSize, TextAreaState } from '@customTypes/atoms-enums';
 
 @Component({
-    selector: 'input-atom',
-    templateUrl: './input-atom.component.html',
-    styleUrls: ['./input-atom.component.scss'],
+    selector: 'textarea-atom',
+    templateUrl: './textarea-atom.component.html',
+    styleUrls: ['./textarea-atom.component.scss'],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => InputAtomComponent),
+            useExisting: forwardRef(() => TextareaAtomComponent),
             multi: true,
         },
     ],
 })
-export class InputAtomComponent implements OnInit, ControlValueAccessor {
+export class TextareaAtomComponent implements OnInit, ControlValueAccessor{
     styles: string = EMPTY_STRING;
     disabled: string | null = null;
     labelStyles: string = EMPTY_STRING;
 
-    @Input() size: InputSize = INPUT_DEFAULT_SIZE;
-    @Input() state: InputState = INPUT_DEFAULT_STATE;
-    @Input() type: InputType = INPUT_DEFAULT_TYPE;
+    @Input() size: TextAreaSize = TEXTAREA_DEFAULT_SIZE;
+    @Input() state: TextAreaState = TEXTAREA_DEFAULT_STATE;
     @Input() placeholder: string = EMPTY_STRING;
     @Input() label: string = EMPTY_STRING;
     @Input() name: string = EMPTY_STRING;
@@ -62,10 +46,10 @@ export class InputAtomComponent implements OnInit, ControlValueAccessor {
     }
 
     ngOnInit(): void {
-        this.styles = `${INPUT_SIZE_PREFIX}${this.size} ${INPUT_STATE_PREFIX}${this.state}`;
+        this.styles = `${TEXTAREA_SIZE_PREFIX}${this.size} ${TEXTAREA_STATE_PREFIX}${this.state}`;
         if (this.state === DISABLED_STATE) this.disabled = this.state;
         if (this.label !== EMPTY_STRING)
-            this.labelStyles = `${INPUT_LABEL_SIZE_PREFIX}${this.size}`;
+            this.labelStyles = `${TEXTAREA_LABEL_SIZE_PREFIX}${this.size}`;
     }
 
     onInputChange(event: Event): void {

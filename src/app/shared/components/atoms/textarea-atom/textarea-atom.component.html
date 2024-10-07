@@ -1,26 +1,24 @@
-<div *ngIf="label === ''; else labeledInput">
-    <input
+<div *ngIf="label === ''; else labeledTextArea">
+    <textarea
         [class]="styles"
-        [type]="type"
         [placeholder]="placeholder"
         [disabled]="disabled ? disabled : false"
         [name]="name"
         [(ngModel)]="value"
         (ngModelChange)="onInputChange($event)"
-    />
+    ></textarea>
 </div>
 
-<ng-template #labeledInput>
-    <div class="labeled-input-container">
+<ng-template #labeledTextArea>
+    <div class="labeled-textarea-container">
         <label for="{{ name }}" class="{{ labelStyles }}">{{ label }}</label>
-        <input
+        <textarea
             [class]="styles"
-            [type]="type"
             [placeholder]="placeholder"
             [disabled]="disabled ? disabled : false"
             [name]="name"
             [(ngModel)]="value"
             (ngModelChange)="onInputChange($event)"
-        />
+        ></textarea>
     </div>
 </ng-template>

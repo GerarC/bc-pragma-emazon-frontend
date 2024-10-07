@@ -1,0 +1,17 @@
+<form class="form-container" (submit)="emitFormSubmit()" [formGroup]="data">
+    <title-atom level="h2" content="Save {{ model | titlecase }}"></title-atom>
+    <input-atom
+        formControlName="name"
+        label="Name"
+        size="s"
+        name="name"
+    ></input-atom>
+    <textarea-atom
+        formControlName="description"
+        label="Description"
+        size="s"
+		type="textarea"
+        name="description"
+    ></textarea-atom>
+    <button-atom size="m">Add {{ model }}</button-atom>
+</form>

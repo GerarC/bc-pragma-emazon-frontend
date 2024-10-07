@@ -1,39 +1,45 @@
-$font-src-light: '../assets/fonts/poppins/Poppins-Light.ttf';
-$font-src-regular: '../assets/fonts/poppins/Poppins-Regular.ttf';
-$font-src-bold: '../assets/fonts/poppins/Poppins-Bold.ttf';
+$font-src-light: "../assets/fonts/poppins/Poppins-Light.ttf";
+$font-src-regular: "../assets/fonts/poppins/Poppins-Regular.ttf";
+$font-src-medium: "../assets/fonts/poppins/Poppins-Medium.ttf";
+$font-src-semibold: "../assets/fonts/poppins/Poppins-SemiBold.ttf";
+$font-src-bold: "../assets/fonts/poppins/Poppins-Bold.ttf";
+
+$font-sources: (
+    300: "../assets/fonts/poppins/Poppins-Light.ttf",
+    400: "../assets/fonts/poppins/Poppins-Regular.ttf",
+    500: "../assets/fonts/poppins/Poppins-Medium.ttf",
+    600: "../assets/fonts/poppins/Poppins-SemiBold.ttf",
+    700: "../assets/fonts/poppins/Poppins-Bold.ttf",
+);
+
+@each $weight, $source in $font-sources {
+    @font-face {
+        font-family: "Poppins";
+        src: url($source);
+        font-weight: $weight;
+    }
+}
 
 $font-sizes: (
-	xs: 14px,
-	s: 16px,
-	m: 18px,
-	l: 22px
+    xs: 14px,
+    s: 16px,
+    m: 18px,
+    l: 22px,
 );
 
 $font-weights: (
-	light: 300,
-	regular: 400
+    light: 300,
+    regular: 400,
 );
 
 @each $name, $size in $font-sizes {
-	.font-size-#{$name}{
-		font-size: $size;
-	}
+    .font-size-#{$name} {
+        font-size: $size;
+    }
 }
 
-@each $name, $weight in $font-weights{
-	.font-weight-#{$name} {
-		font-weight: $weight;
-	}
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url($font-src-regular);
-	font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url($font-src-light);
-	font-weight: 300;
+@each $name, $weight in $font-weights {
+    .font-weight-#{$name} {
+        font-weight: $weight;
+    }
 }

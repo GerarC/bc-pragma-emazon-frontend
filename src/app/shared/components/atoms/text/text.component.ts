@@ -1,5 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EMPTY_STRING } from '@constants/atom-constants';
+import {
+    EMPTY_STRING,
+    TEXT_DEFAULT_SIZE,
+    TEXT_DEFAULT_WEIGHT,
+    TEXT_SIZE_PREFIX,
+    TEXT_WEIGHT_PREFIX,
+} from '@constants/atom-constants';
+import { TextSize, TextWeight } from '@customTypes/atoms-enums';
 
 @Component({
     selector: 'text-atom',
@@ -7,15 +14,14 @@ import { EMPTY_STRING } from '@constants/atom-constants';
     styleUrls: ['./text.component.scss'],
 })
 export class TextComponent implements OnInit {
-	
-	styles = EMPTY_STRING;
-	
-	@Input() weight: string = 'regular';
-	@Input() size: string = 'm';
+    styles = EMPTY_STRING;
+
+    @Input() weight: TextWeight = TEXT_DEFAULT_WEIGHT;
+    @Input() size: TextSize = TEXT_DEFAULT_SIZE;
 
     constructor() {}
 
     ngOnInit(): void {
-		this.styles = `font-size-${this.size} font-weight-${this.weight}`
-	}
+        this.styles = `${TEXT_SIZE_PREFIX}${this.size} ${TEXT_WEIGHT_PREFIX}${this.weight}`;
+    }
 }

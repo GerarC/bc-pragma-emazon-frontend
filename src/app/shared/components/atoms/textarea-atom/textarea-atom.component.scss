@@ -1,35 +1,38 @@
 @import 'styles';
 
-input{
+textarea{
 	all: unset;
 	background-color: $white-color;
 	border-radius: 4px;
+	overflow-y: scroll;
+	scroll-margin: 0 8px 8px 0;
+	resize: none;
 }
 
-.input-size-s {
+.textarea-size-s {
 	padding: 8px 12px;
 	font-size: map-get($map: $font-sizes, $key: "s");
 }
 
-.input-size-m {
+.textarea-size-m {
 	padding: 12px 12px;
 	font-size: map-get($map: $font-sizes, $key: "m");
 }
 
-.label-size-s {
+.textarea-label-size-s {
 	font-size: map-get($map: $font-sizes, $key: "s");
 }
 
-.label-size-m {
+.textarea-label-size-m {
 	font-size: map-get($map: $font-sizes, $key: "m");
 }
 
-.labeled-input-container {
+.labeled-textarea-container {
 	display: inline-grid;
 	gap: 4px;
 }
 
-.input-state-active {
+.textarea-state-active {
     border: 1px solid;
 	border-color: $spacer-light-color;
 	
@@ -42,7 +45,7 @@ input{
 	}
 }
 
-.input-state-disabled {
+.textarea-state-disabled {
     border: 1px solid;
 	border-color: $disabled-color;
 	
