@@ -1,42 +1,55 @@
 {
-  "name": "emazon",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^14.0.0-next.0",
-    "@angular/common": "^14.0.0-next.0",
-    "@angular/compiler": "^14.0.0-next.0",
-    "@angular/core": "^14.0.0-next.0",
-    "@angular/forms": "^14.0.0-next.0",
-    "@angular/platform-browser": "^14.0.0-next.0",
-    "@angular/platform-browser-dynamic": "^14.0.0-next.0",
-    "@angular/router": "^14.0.0-next.0",
-    "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.0",
-    "@angular/cli": "~14.2.0",
-    "@angular/compiler-cli": "^14.0.0-next.0",
-    "@types/jest": "^27.5.2",
-    "jest": "^28.1.3",
-    "jest-preset-angular": "^12.2.6",
-    "typescript": "^4.8.4"
-  },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": [
-      "<rootDir>/setup-jest.ts"
-    ],
-    "globalSetup": "jest-preset-angular/global-setup"
-  }
+	"name": "emazon",
+	"version": "0.0.0",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve",
+		"build": "ng build",
+		"watch": "ng build --watch --configuration development",
+		"test": "jest --coverage",
+		"test:watch": "jest --watchAll"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular/animations": "^14.0.0-next.0",
+		"@angular/common": "^14.0.0-next.0",
+		"@angular/compiler": "^14.0.0-next.0",
+		"@angular/core": "^14.0.0-next.0",
+		"@angular/forms": "^14.0.0-next.0",
+		"@angular/platform-browser": "^14.0.0-next.0",
+		"@angular/platform-browser-dynamic": "^14.0.0-next.0",
+		"@angular/router": "^14.0.0-next.0",
+		"rxjs": "~7.5.0",
+		"tslib": "^2.3.0",
+		"zone.js": "~0.11.4"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "14.2.0",
+		"@angular/cli": "14.2.0",
+		"@angular/compiler-cli": "14.0.0-next.0",
+		"@types/jest": "27.5.2",
+		"jest": "28.1.3",
+		"jest-preset-angular": "12.2.6",
+		"ts-jest": "28.0.8",
+		"typescript": "4.8.4"
+	},
+	"jest": {
+		"preset": "jest-preset-angular",
+		"setupFilesAfterEnv": [
+			"<rootDir>/setup-jest.ts"
+		],
+		"globalSetup": "jest-preset-angular/global-setup",
+		"moduleNameMapper": {
+			"^@atoms/(.*)$": "<rootDir>/src/app/shared/components/atoms/$1",
+			"^@molecules/(.*)$": "<rootDir>/src/app/shared/components/molecules/$1",
+			"^@organisms/(.*)$": "<rootDir>/src/app/shared/components/organisms/$1",
+			"^@templates/(.*)$": "<rootDir>/src/app/shared/components/templates/$1",
+			"^@pages/(.*)$": "<rootDir>/src/app/shared/pages/$1",
+			"^@customTypes/(.*)$": "<rootDir>/src/app/shared/types/$1",
+			"^@interfaces/(.*)$": "<rootDir>/src/app/shared/interfaces/$1",
+			"^@constants/(.*)$": "<rootDir>/src/app/shared/constants/$1",
+			"^@services/(.*)$": "<rootDir>/src/app/core/services/$1",
+			"^src/environments/(.*)$": "<rootDir>/src/environments/$1"
+		}
+	}
 }

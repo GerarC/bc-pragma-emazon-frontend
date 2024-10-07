@@ -1,0 +1,56 @@
+@import "styles";
+
+textarea {
+    all: unset;
+    background-color: $white-color;
+    border-radius: 4px;
+    overflow-y: scroll;
+	overflow-wrap: anywhere;
+    scroll-margin: 0 8px 8px 0;
+    resize: none;
+}
+
+.textarea-size-s {
+    padding: 8px 12px;
+    font-size: map-get($map: $font-sizes, $key: "s");
+}
+
+.textarea-size-m {
+    padding: 12px 12px;
+    font-size: map-get($map: $font-sizes, $key: "m");
+}
+
+.textarea-label-size-s {
+    font-size: map-get($map: $font-sizes, $key: "s");
+}
+
+.textarea-label-size-m {
+    font-size: map-get($map: $font-sizes, $key: "m");
+}
+
+.labeled-textarea-container {
+    display: inline-grid;
+    gap: 4px;
+}
+
+.textarea-state-active {
+    border: 1px solid;
+    border-color: $spacer-light-color;
+
+    &:focus {
+        border-color: $accent-color;
+    }
+
+    &::placeholder {
+        color: $border-color;
+    }
+}
+
+.textarea-state-disabled {
+    border: 1px solid;
+    border-color: $disabled-color;
+
+    &::placeholder {
+        color: $disabled-color;
+    }
+}

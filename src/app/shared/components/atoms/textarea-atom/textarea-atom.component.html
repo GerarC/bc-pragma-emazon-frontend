@@ -1,0 +1,24 @@
+<div *ngIf="label === ''; else labeledTextArea">
+    <textarea
+        [class]="styles"
+        [placeholder]="placeholder"
+        [disabled]="disabled ? disabled : false"
+        [name]="name"
+        [(ngModel)]="value"
+        (ngModelChange)="onInputChange($event)"
+    ></textarea>
+</div>
+
+<ng-template #labeledTextArea>
+    <div class="labeled-textarea-container">
+        <label for="{{ name }}" class="{{ labelStyles }}">{{ label }}</label>
+        <textarea
+            [class]="styles"
+            [placeholder]="placeholder"
+            [disabled]="disabled ? disabled : false"
+            [name]="name"
+            [(ngModel)]="value"
+            (ngModelChange)="onInputChange($event)"
+        ></textarea>
+    </div>
+</ng-template>

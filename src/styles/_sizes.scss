@@ -1,0 +1,31 @@
+$small-screen-width: 667px;
+$medium-screen-width: 1024px;
+$large-screen-width: 1280px;
+$mobile: mobile;
+$tablet: tablet;
+$desktop: desktop;
+
+$media_queries: (
+  mobile: "only screen and (max-width: #{$small-screen-width})",
+  tablet: "only screen and (min-width: #{($small-screen-width + 1)}) and (max-width: #{$medium-screen-width})",
+  desktop: "only screen and (min-width: #{($medium-screen-width + 1)})"
+);
+
+
+// Stolen from stack over flow -> it creates a better way to make 
+@mixin style_for($breakpoints...) {
+  $conditions: ();
+
+  @each $breakpoint in $breakpoints {
+    $condition: map-get($media_queries, $breakpoint);
+    @if $condition {
+      $conditions: append($conditions, $condition, comma);
+    } @else {
+      @warn "No media query defined for '#{$breakpoint}'.";
+    }
+  }
+
+  @media #{$conditions} {
+    @content;
+  }
+}

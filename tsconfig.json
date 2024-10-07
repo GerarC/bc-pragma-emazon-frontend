@@ -2,10 +2,18 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": "./",
         "outDir": "./dist/out-tsc",
         "paths": {
-            "@atoms/*": ["app/components/atoms/*"]
+            "@atoms/*": ["src/app/shared/components/atoms/*"],
+            "@molecules/*": ["src/app/shared/components/molecules/*"],
+            "@organisms/*": ["src/app/shared/components/organisms/*"],
+            "@templates/*": ["src/app/shared/components/templates/*"],
+            "@pages/*": ["src/app/shared/pages/*"],
+            "@customTypes/*": ["src/app/shared/types/*"],
+            "@interfaces/*": ["src/app/shared/interfaces/*"],
+            "@constants/*": ["src/app/shared/constants/*"],
+            "@services/*": ["src/app/core/services/*"]
         },
         "forceConsistentCasingInFileNames": true,
         "strict": true,
