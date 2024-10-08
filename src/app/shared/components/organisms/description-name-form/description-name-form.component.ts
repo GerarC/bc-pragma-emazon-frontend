@@ -6,8 +6,8 @@ import {
     DESCRIPTION_NAME_FORM_DEFAULT_MODEL,
     DESCRIPTION_NAME_FORM_DISABLED_BUTTON_STATE,
 } from '@constants/organism-constants';
-import { ButtonState } from '@customTypes/atoms-enums';
-import { DescriptionNameFormModel } from '@customTypes/organisms-enums';
+import { ButtonState } from '@customTypes/atoms-types';
+import { DescriptionNameFormModel } from '@customTypes/organisms-types';
 import { DescriptionNameFormData } from '@interfaces/organisms-interfaces';
 
 @Component({

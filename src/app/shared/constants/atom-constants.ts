@@ -10,7 +10,7 @@ import {
     TextSize,
 	TextWeight,
 	TitleLevel,
-} from '@customTypes/atoms-enums';
+} from '@customTypes/atoms-types';
 
 export const EMPTY_STRING: string = '';
 export const DISABLED_STATE: string = 'disabled';

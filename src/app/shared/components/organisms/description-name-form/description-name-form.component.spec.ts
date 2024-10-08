@@ -1,9 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DescriptionNameFormComponent } from './description-name-form.component';
-import { By } from '@angular/platform-browser';
-import { ButtonState } from '@customTypes/atoms-enums';
-import { DescriptionNameFormModel } from '@customTypes/organisms-enums';
 import { AtomsModule } from '@atoms/atoms.module';
 
 describe('DescriptionNameFormComponent', () => {
@@ -13,7 +10,7 @@ describe('DescriptionNameFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ DescriptionNameFormComponent ],
-      imports: [ ReactiveFormsModule, AtomsModule ] // Import the ReactiveFormsModule for form handling
+      imports: [ ReactiveFormsModule, AtomsModule ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(DescriptionNameFormComponent);
@@ -36,7 +33,6 @@ describe('DescriptionNameFormComponent', () => {
     const nameControl = component.data.get('name');
     const descriptionControl = component.data.get('description');
 
-    // Set form controls to non-empty values
     nameControl?.setValue('Sample Name');
     descriptionControl?.setValue('Sample Description');
 
@@ -50,7 +46,6 @@ describe('DescriptionNameFormComponent', () => {
     const nameControl = component.data.get('name');
     const descriptionControl = component.data.get('description');
 
-    // Set form controls to empty values
     nameControl?.setValue('');
     descriptionControl?.setValue('');
 
@@ -65,11 +60,9 @@ describe('DescriptionNameFormComponent', () => {
     const nameControl = component.data.get('name');
     const descriptionControl = component.data.get('description');
 
-    // Fill form with sample data
     nameControl?.setValue('Sample Name');
     descriptionControl?.setValue('Sample Description');
 
-    // Trigger the submit event
     component.emitFormSubmit();
     fixture.detectChanges();
 
@@ -83,15 +76,12 @@ describe('DescriptionNameFormComponent', () => {
     const nameControl = component.data.get('name');
     const descriptionControl = component.data.get('description');
 
-    // Fill form with sample data
     nameControl?.setValue('Sample Name');
     descriptionControl?.setValue('Sample Description');
 
-    // Trigger the submit event
     component.emitFormSubmit();
     fixture.detectChanges();
 
-    // Check if form has been reset
     expect(nameControl?.value).toBe(null);
     expect(descriptionControl?.value).toBe(null);
     expect(component.buttonState).toBe('active');

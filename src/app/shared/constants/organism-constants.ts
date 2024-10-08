@@ -1,5 +1,5 @@
-import { ButtonState } from '@customTypes/atoms-enums';
-import { DescriptionNameFormModel } from '../types/organisms-enums';
+import { ButtonState } from '@customTypes/atoms-types';
+import { DescriptionNameFormModel } from '@customTypes/organisms-types';
 
 // Description Name Form
 export const DESCRIPTION_NAME_FORM_DEFAULT_MODEL: DescriptionNameFormModel =

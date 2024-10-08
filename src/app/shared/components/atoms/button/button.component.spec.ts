@@ -9,7 +9,7 @@ import {
   BUTTON_TYPE_PREFIX,
   BUTTON_STATE_PREFIX,
 } from '@constants/atom-constants';
-import { ButtonSize, ButtonState, ButtonType } from '@customTypes/atoms-enums';
+import { ButtonSize, ButtonState, ButtonType } from '@customTypes/atoms-types';
 
 describe('ButtonComponent', () => {
   let component: ButtonComponent;

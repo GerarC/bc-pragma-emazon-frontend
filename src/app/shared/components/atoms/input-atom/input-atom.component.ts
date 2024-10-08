@@ -16,7 +16,7 @@ import {
     INPUT_SIZE_PREFIX,
     INPUT_STATE_PREFIX,
 } from '@constants/atom-constants';
-import { InputSize, InputState, InputType } from '@customTypes/atoms-enums';
+import { InputSize, InputState, InputType } from '@customTypes/atoms-types';
 
 @Component({
     selector: 'input-atom',

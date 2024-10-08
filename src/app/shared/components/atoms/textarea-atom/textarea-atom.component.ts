@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DISABLED_STATE, EMPTY_STRING, TEXTAREA_DEFAULT_SIZE, TEXTAREA_DEFAULT_STATE, TEXTAREA_LABEL_SIZE_PREFIX, TEXTAREA_SIZE_PREFIX, TEXTAREA_STATE_PREFIX } from '@constants/atom-constants';
-import { TextAreaSize, TextAreaState } from '@customTypes/atoms-enums';
+import { TextAreaSize, TextAreaState } from '@customTypes/atoms-types';
 
 @Component({
     selector: 'textarea-atom',

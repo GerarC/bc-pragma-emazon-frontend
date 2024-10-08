@@ -16,7 +16,7 @@ import {
     BUTTON_TYPE_PREFIX,
     EMPTY_STRING,
 } from '@constants/atom-constants';
-import { ButtonSize, ButtonState, ButtonType } from '@customTypes/atoms-enums';
+import { ButtonSize, ButtonState, ButtonType } from '@customTypes/atoms-types';
 
 const STATE = 'state';
 

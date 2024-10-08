@@ -4,7 +4,7 @@ import {
     OnInit,
 } from '@angular/core';
 import { EMPTY_STRING, TITLE_DEFAULT_LEVEL } from '@constants/atom-constants';
-import { TitleLevel } from '@customTypes/atoms-enums';
+import { TitleLevel } from '@customTypes/atoms-types';
 
 @Component({
     selector: 'title-atom',

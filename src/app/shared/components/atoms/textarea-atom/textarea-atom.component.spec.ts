@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel binding
 import { TextareaAtomComponent } from './textarea-atom.component';
-import { TextAreaSize, TextAreaState } from '@customTypes/atoms-enums';
+import { TextAreaSize, TextAreaState } from '@customTypes/atoms-types';
 import { EMPTY_STRING } from '@constants/atom-constants';
 
 describe('TextareaAtomComponent', () => {

@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th
+                *ngFor="let column of columns"
+                datatable-column-atom
+                [column]="column"
+            >
+                <!-- Column content is now rendered by the column component -->
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            *ngFor="let row of rows"
+            datatable-row-atom
+            [row]="row"
+            [columns]="columns"
+        ></tr>
+    </tbody>
+</table>

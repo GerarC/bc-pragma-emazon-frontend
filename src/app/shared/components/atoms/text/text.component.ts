@@ -6,7 +6,7 @@ import {
     TEXT_SIZE_PREFIX,
     TEXT_WEIGHT_PREFIX,
 } from '@constants/atom-constants';
-import { TextSize, TextWeight } from '@customTypes/atoms-enums';
+import { TextSize, TextWeight } from '@customTypes/atoms-types';
 
 @Component({
     selector: 'text-atom',

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TitleAtomComponent } from './title-atom.component';
-import { TitleLevel } from '@customTypes/atoms-enums';
+import { TitleLevel } from '@customTypes/atoms-types';
 import { EMPTY_STRING, TITLE_DEFAULT_LEVEL } from '@constants/atom-constants';
 
 describe('TitleAtomComponent', () => {
