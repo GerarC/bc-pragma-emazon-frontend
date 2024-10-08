@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pagination-bar',
+  selector: 'pagination-bar',
   templateUrl: './pagination-bar.component.html',
   styleUrls: ['./pagination-bar.component.scss']
 })

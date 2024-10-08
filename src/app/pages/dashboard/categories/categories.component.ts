@@ -1,26 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CategoryService } from '@services/category/category.service';
 import { CategoryRequest, CategoryResponse } from '@interfaces/models/category';
 import { DescriptionNameFormData } from '@interfaces/organisms-interfaces';
 import { Column } from '@interfaces/atoms-interfaces';
 import { categoryColumns } from './categories-constants';
+import { Page } from '@interfaces/services/page';
+import { Subject, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-categories',
     templateUrl: './categories.component.html',
     styleUrls: ['./categories.component.scss'],
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent implements OnInit, OnDestroy {
+	private destroyed = new Subject();
     columns: Array<Column> = categoryColumns;
-    rows: Array<CategoryResponse> = [];
+    page?: Page<CategoryResponse>;
+	isDataLoaded: boolean = false;
 
     constructor(private categoryService: CategoryService) {}
 
     ngOnInit(): void {
-        this.categoryService.getCategories({}).subscribe((observer) => {
-			this.rows = observer.content;
+        const observable = this.categoryService.getCategories({}).subscribe((data) => {
+			this.page = data
+			this.isDataLoaded = true;
         });
     }
+
+	ngOnDestroy(): void {
+        this.destroyed.complete(); 
+	}
 
     onSubmit(data: DescriptionNameFormData) {
         const category: CategoryRequest = {

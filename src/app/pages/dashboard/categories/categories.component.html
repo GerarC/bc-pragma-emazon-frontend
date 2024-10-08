@@ -2,4 +2,6 @@
     model="category"
     (formSubmit)="onSubmit($event)"
 ></description-name-form>
-<datatable [columns]="columns" [rows]="rows"></datatable>
+<ng-container *ngIf="isDataLoaded">
+<paginated-datatable [columns]="columns" [page]="page"></paginated-datatable>
+</ng-container>

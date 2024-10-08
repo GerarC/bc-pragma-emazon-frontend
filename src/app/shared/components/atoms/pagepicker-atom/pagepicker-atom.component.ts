@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pagepicker-atom',
+  selector: 'pagepicker-atom',
   templateUrl: './pagepicker-atom.component.html',
   styleUrls: ['./pagepicker-atom.component.scss']
 })
