@@ -6,8 +6,6 @@ import { InputAtomComponent } from './input-atom/input-atom.component';
 import { TitleAtomComponent } from './title-atom/title-atom.component';
 import { FormsModule } from '@angular/forms';
 import { TextareaAtomComponent } from './textarea-atom/textarea-atom.component';
-import { DatatableRowAtomComponent } from './datatable-row-atom/datatable-row-atom.component';
-import { DatatableColumnAtomComponent } from './datatable-column-atom/datatable-column-atom.component';
 import { PagepickerAtomComponent } from './pagepicker-atom/pagepicker-atom.component';
 
 @NgModule({
@@ -17,8 +15,6 @@ import { PagepickerAtomComponent } from './pagepicker-atom/pagepicker-atom.compo
         InputAtomComponent,
         TitleAtomComponent,
         TextareaAtomComponent,
-        DatatableRowAtomComponent,
-        DatatableColumnAtomComponent,
         PagepickerAtomComponent,
     ],
     imports: [CommonModule, FormsModule],
@@ -28,8 +24,6 @@ import { PagepickerAtomComponent } from './pagepicker-atom/pagepicker-atom.compo
         InputAtomComponent,
         TitleAtomComponent,
         TextareaAtomComponent,
-        DatatableRowAtomComponent,
-        DatatableColumnAtomComponent,
         PagepickerAtomComponent,
     ],
 })

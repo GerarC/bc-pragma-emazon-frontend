@@ -1,21 +1,16 @@
 <table>
     <thead>
         <tr>
-            <th
-                *ngFor="let column of columns"
-                datatable-column-atom
-                [column]="column"
-            >
-                <!-- Column content is now rendered by the column component -->
+            <th *ngFor="let column of columns">
+                {{ column.header }}
             </th>
         </tr>
     </thead>
     <tbody>
-        <tr
-            *ngFor="let row of rows"
-            datatable-row-atom
-            [row]="row"
-            [columns]="columns"
-        ></tr>
+        <tr *ngFor="let row of rows">
+            <td *ngFor="let column of columns">
+				{{row[column.field]}}
+			</td>
+        </tr>
     </tbody>
 </table>
